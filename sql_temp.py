@@ -20,9 +20,10 @@ def veiw():
     rows = cur.fetchall() # storing all the data in a variable
     conn.close() # closing the table
 
+    # Store data from sql into 
     account_dic = {}
-    for row in rows:
-        ac = row[0]
+    for row in rows: # Iterates through each row 
+        ac = row[0] 
         pw = row[1]
         balance = row[2]
         account_dic[ac] = [pw, balance]
@@ -44,8 +45,8 @@ def update_contact(name, number, address):
 
 
 # create_table()
-# new_item('Seth', '07922106711', '9 Freestone rd')
-# update_contact('Seth', '07922106711', '9 Freestone rd')
+# new_item('Seth', '01010101111', '9 Fake rd')
+# update_contact('Seth', '0101101001', '9 Fake rd')
 
 
 veiw()
